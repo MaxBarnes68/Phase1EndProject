@@ -1,0 +1,13 @@
+nav {
+    margin-bottom: 10px;
+}
+
+.nav-link:hover {
+    color: aquamarine;
+    text-decoration: underline;
+}
+
+.active {
+    color: aquamarine !important;
+    font-weight: bold;
+}

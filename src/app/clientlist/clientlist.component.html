@@ -1,0 +1,31 @@
+<!-- <div class="container text-center" id="container">
+    <div class="row">
+        <div class="col-6 col-sm-4">
+            <div class="card" style="width: 20rem" *ngIf="clients.length > 0 ">
+                <div class="card-body" *ngFor="let cli of clients">
+                    <h5 class="card-title">{{cli.name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">
+                        Company: {{cli.company}}
+                    </h6>
+                    <p class="card-text">
+                        Phone: {{cli.phone}}
+                    </p>
+                    <p class="card-text">
+                        Email: {{cli.email}}
+                    </p>
+                    <a href="#" class="card-link">Edit</a>
+                    <a href="#" class="card-link">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<h2 class="text-center mb-4">Client List</h2>
+<div *ngIf="clients.length > 0">
+    <div *ngFor="let cli of clients">
+        <app-client [client]="cli"></app-client>      
+    </div>
+</div>
+    <div class="container" *ngIf="clients.length <= 0"> 
+    <h1>No clients are in the system!</h1> 
+    </div> 
