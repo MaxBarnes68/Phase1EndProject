@@ -1,0 +1,84 @@
+{
+  "clients": [
+    {
+      "cid": 3,
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "phone": "+1 555-555-5555",
+      "company": "PQR Ltd.",
+      "id": "3"
+    },
+    {
+      "cid": 4,
+      "name": "Bob Brown",
+      "email": "bob.brown@example.com",
+      "phone": "+1 777-777-7777",
+      "company": "STU Group",
+      "id": "4"
+    },
+    {
+      "cid": 5,
+      "name": "Charlie Davis",
+      "email": "charlie.davis@example.com",
+      "phone": "+1 888-888-8888",
+      "company": "VWX Corp.",
+      "id": "5"
+    },
+    {
+      "cid": 6,
+      "name": "David Wilson",
+      "email": "david.wilson@example.com",
+      "phone": "+1 999-999-9999",
+      "company": "YZA Inc.",
+      "id": "6"
+    },
+    {
+      "id": 1,
+      "cid": 1,
+      "name": "Max Barnes",
+      "email": "max@example.com",
+      "phone": "4574551521",
+      "company": "Kindred"
+    },
+    {
+      "id": "2",
+      "cid": "2",
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "phone": "8741585512",
+      "company": "Lightyear",
+      "navigationId": 4
+    },
+    {
+      "id": "7",
+      "cid": "7",
+      "name": "Jane Smithy",
+      "email": "smithy@example.com",
+      "phone": "7415874441",
+      "company": "Smithy and Co"
+    }
+  ],
+  "meetings": [
+    {
+      "mid": 1,
+      "clientname": "Alice Johnson",
+      "datetime": "2022-05-15 10:00 AM",
+      "agenda": "Discuss project progress",
+      "id": "1"
+    },
+    {
+      "mid": 2,
+      "clientname": "Bob Brown",
+      "datetime": "2022-05-15 11:00 AM",
+      "agenda": "Review progress report",
+      "id": "2"
+    },
+    {
+      "mid": 3,
+      "clientname": "Charlie Davis",
+      "datetime": "2022-05-15 12:00 PM",
+      "agenda": "Discuss upcoming milestones",
+      "id": "3"
+    }
+  ]
+}

@@ -4,4 +4,5 @@ export interface Client {
     email: string;
     phone: string;
     company: string;
+    id?: number; // optional for update operation, added for the server to return the updated client record.
 }

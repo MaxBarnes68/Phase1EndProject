@@ -20,12 +20,14 @@
         </div>
     </div>
 </div> -->
-<h2 class="text-center mb-4">Client List</h2>
-<div *ngIf="clients.length > 0">
+<h2>Client List</h2>
+<div class="container" *ngIf="clients.length > 0">
     <div *ngFor="let cli of clients">
-        <app-client [client]="cli"></app-client>      
+        <app-client [client]="cli"></app-client>
+        <button class="btn btn-md btn-primary me-2" (click)="edit(cli)">Edit</button>
+        <button class="btn btn-md btn-primary" (click)="delete(cli)">Delete</button>    
     </div>
 </div>
-    <div class="container" *ngIf="clients.length <= 0"> 
+<div class="container" *ngIf="clients.length <= 0"> 
     <h1>No clients are in the system!</h1> 
-    </div> 
+</div>

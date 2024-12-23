@@ -8,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'clientmanagement';
+
+  newclient: any;
+
+  addClient(client: any) {
+    this.newclient = client;
+  }
+
+  newmeeting: any;
+
+  addMeeting(meeting: any) {
+    this.newmeeting = meeting;
+  }
 }
