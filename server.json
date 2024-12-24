@@ -33,7 +33,7 @@
       "id": "6"
     },
     {
-      "id": 1,
+      "id": "1",
       "cid": 1,
       "name": "Max Barnes",
       "email": "max@example.com",
@@ -79,6 +79,23 @@
       "datetime": "2022-05-15 12:00 PM",
       "agenda": "Discuss upcoming milestones",
       "id": "3"
+    }
+  ],
+  "users": [
+    {
+      "username": "abc",
+      "password": "abc123",
+      "id": "067e"
+    },
+    {
+      "username": "pqr",
+      "password": "pqr123",
+      "id": "6036"
+    },
+    {
+      "username": "user",
+      "password": "user123",
+      "id": "0458"
     }
   ]
 }

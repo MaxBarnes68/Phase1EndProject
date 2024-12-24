@@ -8,15 +8,20 @@ import { MeetinglistComponent } from './meetinglist/meetinglist.component';
 import { MeetingComponent } from './meeting/meeting.component';
 import { MeetingformComponent } from './meetingform/meetingform.component';
 import { MeetingeditComponent } from './meetingedit/meetingedit.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LoginComponent } from './login/login.component';
+import { authGuard } from './service/auth.guard';
 
 const routes: Routes = [
   {path:'' ,redirectTo:'clientlist',pathMatch:'full'},
-  { path: 'clientlist', component: ClientlistComponent },
-  {path: 'clientform', component: ClientformComponent },
-  {path: 'clientedit', component: ClienteditComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'clientlist', component: ClientlistComponent },
+  {path: 'clientform', component: ClientformComponent, canActivate:[authGuard]},
+  {path: 'clientedit', component: ClienteditComponent, canActivate:[authGuard]},
   {path: 'meetinglist', component: MeetinglistComponent },
-  {path:'meetingform', component: MeetingformComponent },
-  {path:'meetingedit', component: MeetingeditComponent}
+  {path:'meetingform', component: MeetingformComponent, canActivate:[authGuard]},
+  {path:'meetingedit', component: MeetingeditComponent, canActivate:[authGuard]},
+  {path: '**', component: PagenotfoundComponent}
 ];
 
 @NgModule({

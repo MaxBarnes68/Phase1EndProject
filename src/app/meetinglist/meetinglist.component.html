@@ -1,1 +1,11 @@
-<p>meetinglist works!</p>
+<h2>Meeting List</h2>
+<div class="container" *ngIf="meetings.length > 0">
+    <div *ngFor="let met of meetings">
+        <app-meeting [meeting]="met"></app-meeting>
+        <button class="btn btn-md btn-primary me-2" (click)="edit(met)">Edit</button>
+        <button class="btn btn-md btn-primary" (click)="delete(met)">Delete</button>    
+    </div>
+</div>
+<div class="container" *ngIf="meetings.length <= 0"> 
+    <h1>No meetings are in the system!</h1> 
+</div>

@@ -15,6 +15,12 @@ import { MeetingComponent } from './meeting/meeting.component';
 import { MeetinglistComponent } from './meetinglist/meetinglist.component';
 import { MeetingeditComponent } from './meetingedit/meetingedit.component';
 import { MeetingformComponent } from './meetingform/meetingform.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LoginComponent } from './login/login.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import {MatCardModule } from '@angular/material/card';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -28,15 +34,22 @@ import { MeetingformComponent } from './meetingform/meetingform.component';
     MeetingComponent,
     MeetinglistComponent,
     MeetingeditComponent,
-    MeetingformComponent
+    MeetingformComponent,
+    PagenotfoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

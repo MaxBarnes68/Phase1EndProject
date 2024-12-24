@@ -1,0 +1,14 @@
+.meeting {
+    border: 2px solid aquamarine;
+    margin: 10px auto;
+    width: 270px;
+}
+
+.midColumn {
+    width: 50px;
+    align-items: center;
+}
+
+td {
+    width: 300px;
+}

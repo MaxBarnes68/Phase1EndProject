@@ -1,1 +1,104 @@
-<p>meetingedit works!</p>
+<h3>Update Meeting</h3>
+
+<div>
+    <form #meetingform="ngForm" (submit)="editMeeting()">
+        <div class="form-group">
+            <label>Meeting ID</label>
+            <input
+                type="text"
+                class="form-control"
+                [class.is-invalid]="mid.touched && mid.invalid"
+                [class.is-valid]="mid.touched && mid.valid"
+                required
+                placeholder="Enter meeting ID..."
+                pattern="^[A-Za-z0-9]+$"
+                name="mid"
+                [(ngModel)]="meeting.mid"
+                #mid="ngModel"
+                />
+            <div *ngIf="mid.touched && mid.errors && mid.invalid">
+                <small class="text-danger" *ngIf="mid.errors['required']">
+                    Meeting ID is required
+                </small>
+                <small class="text-danger" *ngIf="mid.errors['pattern']">
+                    Meeting ID should only contain alphanumeric characters
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Client Name</label>
+            <input
+                type="text"
+                class="form-control"
+                [class.is-invalid]="clientname.touched && clientname.invalid"
+                [class.is-valid]="clientname.touched && clientname.valid"
+                required
+                placeholder="Enter client name..."
+                pattern="^[A-Za-z\s]+$"
+                minlength="3"
+                name="clientname"
+                [(ngModel)]="meeting.clientname"
+                #clientname="ngModel"
+            />
+            <div *ngIf="clientname.touched && clientname.errors && clientname.invalid">
+                <small class="text-danger" *ngIf="clientname.errors['required']">
+                    Client name is required
+                </small>
+                <small class="text-danger" *ngIf="clientname.errors['pattern']">
+                    Client name should only contain alphabets and spaces
+                </small>
+                <small class="text-danger" *ngIf="clientname.errors['minlength']">
+                    Client name should have at least 3 characters
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Date and Time</label>
+            <input
+                type="datetime"
+                class="form-control"
+                [class.is-invalid]="datetime.touched && datetime.invalid"
+                [class.is-valid]="datetime.touched && datetime.valid"
+                required
+                placeholder="Enter date and time..."
+                name="datetime"
+                [(ngModel)]="meeting.datetime"
+                #datetime="ngModel"
+            />
+            <div *ngIf="datetime.touched && datetime.errors && datetime.invalid">
+                <small class="text-danger" *ngIf="datetime.errors['required']">
+                    Date and Time is required
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Agenda</label>
+            <input
+                type="text"
+                class="form-control"
+                [class.is-invalid]="agenda.touched && agenda.invalid"
+                [class.is-valid]="agenda.touched && agenda.valid"
+                required
+                placeholder="Enter agenda for meeting..."
+                pattern="^[A-Za-z\s]+$"
+                minlength="3"
+                name="agenda"
+                [(ngModel)]="meeting.agenda"
+                #agenda="ngModel"
+/>
+            <div *ngIf="agenda.touched && agenda.errors && agenda.invalid">
+                <small class="text-danger" *ngIf="agenda.errors['required']">
+                    Agenda is required
+                </small>
+                <small class="text-danger" *ngIf="agenda.errors['pattern']">
+                    Agenda should only contain alphabets and spaces
+                </small>
+                <small class="text-danger" *ngIf="agenda.errors['minlength']">
+                    Agenda should have at least 3 characters
+                </small>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Meeting</button>
+    </form>
+</div>
+

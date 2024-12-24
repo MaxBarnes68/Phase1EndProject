@@ -19,7 +19,7 @@ export class MeetinghttpService {
     { 
       return this.http.get<Meeting>(this.url+'/'+mid); 
     } 
-    addCMeeting(meeting:Meeting):Observable<Meeting> 
+    addMeeting(meeting:Meeting):Observable<Meeting> 
     { 
       meeting['id'] = meeting.mid; 
       return this.http.post<Meeting>(this.url, meeting); 

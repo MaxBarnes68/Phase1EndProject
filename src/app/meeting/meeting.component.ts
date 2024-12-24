@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Meeting } from '../model/meeting';
 
 @Component({
   selector: 'app-meeting',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './meeting.component.css'
 })
 export class MeetingComponent {
-
+  @Input()
+  meeting: Meeting
+  constructor() {
+    this.meeting = { mid: 0, clientname: '', datetime: new Date(), agenda: '' };
+  }
 }
+
