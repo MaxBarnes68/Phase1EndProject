@@ -6,4 +6,21 @@ mat-card {
    
   mat-form-field { 
     display: block; 
-  } 
+  }
+
+  h2 {
+    color: white;
+    padding-bottom: 10px;
+    text-decoration: underline;
+  }
+
+  button {
+    background-color: aquamarine !important;
+    color: black !important;
+  }
+
+  button:hover {
+    background-color: black !important;
+    color: aquamarine !important;
+    border: white 2px solid !important;
+  }
